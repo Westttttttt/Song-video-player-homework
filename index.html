@@ -4,35 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Song Video Player</title>
+    <title>Songs and Videos Player</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        .container {
+            width: 100vw;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             text-align: center;
-            background-color: #f4f4f4;
         }
 
         h2 {
             color: #333;
         }
 
-        .container {
-            width: 80%;
-            margin: auto;
-            padding: 20px;
-            background: white;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-        }
-
         .media-section {
             margin-top: 20px;
         }
 
-        audio,
-        video {
-            width: 100%;
+        audio {
+            width: 500px;
             margin: 10px 0;
+        }
+
+        video {
+            min-width: 400px;
+            min-height: 500px;
+            max-width: 400px;
+            max-height: 500px;
+            border: black solid 1px;
         }
 
         iframe {
@@ -40,14 +41,22 @@
             height: 600px;
             border: none;
         }
+
+        .video-container {
+            width: 100vw;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
     </style>
 </head>
 
 <body>
 
     <div class="container">
-        <h2>🎵 Themed Songs Playlist</h2>
-        <div class="media-section">
+        <h2>Songs 🎶</h2>
+        <div class="song-container">
             <audio controls src="songs/song1.mp3"></audio>
             <audio controls src="songs/song2.mp3"></audio>
             <audio controls src="songs/song3.mp3"></audio>
@@ -60,8 +69,8 @@
             <audio controls src="songs/song10.mp3"></audio>
         </div>
 
-        <h2>🎥 Themed Video Collection</h2>
-        <div class="media-section">
+        <h2>🎥 Videos</h2>
+        <div class="video-container">
             <video controls src="videos/video1.mp4"></video>
             <video controls src="videos/video2.mp4"></video>
             <video controls src="videos/video3.mp4"></video>
@@ -76,7 +85,7 @@
 
         <h2>📄 Assignment Report (PDF)</h2>
         <div class="media-section">
-            <iframe src="report.pdf"></iframe>
+            <iframe src="about.pdf"></iframe>
         </div>
     </div>
 
